@@ -1,0 +1,20 @@
+.articles-list{
+    list-style: none;
+    padding:0;
+}
+.articles-list *{
+    margin:0;
+}
+.articles-list li a{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color:black;
+    transition: 0.3s;
+}
+.articles-list li a:hover{
+    color:grey;
+}
+.articles-list li p{
+    color:gray;
+}

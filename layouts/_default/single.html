@@ -1,0 +1,10 @@
+{{define "main"}}
+<article>
+  <h1>{{.Title}}</h1>
+  <div class="underheader">
+    <span>{{ printf "Reading time: %d min" .ReadingTime }}</span
+    ><span>{{ .Date | time.Format ":date_medium" }}</span>
+  </div>
+  {{.Content}}
+</article>
+{{end}}

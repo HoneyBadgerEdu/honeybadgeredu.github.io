@@ -1,0 +1,25 @@
+article{
+    display: flex;
+    flex-direction: column;
+}
+article h1{
+    font-weight: 500;
+}
+.underheader{
+    display: flex;
+    justify-content: space-between;
+    color: darkgrey;
+}
+img{
+    width: 100%;
+}
+article em{
+    display: block;
+    font-size: .9rem;
+    text-align: right;
+}
+article pre{
+    padding:1em;
+    border-radius: 15px;
+    white-space:wrap;
+}

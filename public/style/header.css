@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a{
+  color: gray;
+  text-decoration: none;
+}
+nav a {
+  text-decoration: none;
+  color: gray;
+  margin-left:2em;
+  transition: 0.3s;
+}
+nav a:hover{
+    color:darkgrey;
+}

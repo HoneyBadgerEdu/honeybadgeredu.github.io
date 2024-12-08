@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Hind Mysuru", sans-serif;
+  margin: auto;
+  max-width: 600px;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  padding:1em;
+}

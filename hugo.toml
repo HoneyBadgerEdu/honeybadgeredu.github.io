@@ -1,3 +1,9 @@
-baseURL = 'https://example.org/'
+baseURL = 'honeybager.github.io'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Badger Tech'
+canonialURL = true
+[markup]
+  [markup.highlight]
+    noClasses = false # Use CSS classes for better customization
+    style = "vulcan" # Choose a syntax highlighting theme
+    lineNumbers = true # Enable line numbers (optional)
