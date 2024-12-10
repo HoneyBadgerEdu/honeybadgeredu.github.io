@@ -2,14 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2024-10-10T00:00:00+00:00</lastmod>
+    <loc>honeybager.github.io/articles/</loc>
+    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/article-one/</loc>
-    <lastmod>2024-10-10T00:00:00+00:00</lastmod>
+    <loc>honeybager.github.io/</loc>
+    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>honeybager.github.io/articles/language-switch-hugo/</loc>
+    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>honeybager.github.io/articles/multiple-github-accounts/</loc>
+    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>honeybager.github.io/about/</loc>
+  </url><url>
+    <loc>honeybager.github.io/categories/</loc>
+  </url><url>
+    <loc>honeybager.github.io/contact/</loc>
+  </url><url>
+    <loc>honeybager.github.io/tags/</loc>
   </url>
 </urlset>

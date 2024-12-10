@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple language switcher for HUGO</title>
+    <link rel="stylesheet" href="/style/global.css">
+<link rel="stylesheet" href="/style/header.css">
+<link rel="stylesheet" href="/style/footer.css">
+<link rel="stylesheet" href="/style/articles-list.css">
+<link rel="stylesheet" href="/style/markdown.css">
+<link rel="stylesheet" href="/style/syntax.css">
+  </head>
+  <body>
+    <header>
+  <div class="logo">
+    <a href="/"><h2>badger tech</h2></a>
+  </div>
+  <nav>
+    
+    <a href="honeybager.github.io/contact/">contact</a>
+    
+    <a href="honeybager.github.io/about/">about</a>
+    
+  </nav>
+</header>
+ 
+<article>
+  <h1>Simple language switcher for HUGO</h1>
+  <div class="underheader">
+    <span>Reading time: 2 min</span
+    ><span>Dec 9, 2024</span>
+  </div>
+  <p><img src="/img/language-switcher/lang-switch.gif" alt="lang-switcher"></p>
+<p>A straightforward language switcher with just a few lines of code. The result is a list of available languages that are specified in your Hugo config (hugo.toml).</p>
+<p>Here is code for header.html</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-template" data-lang="go-template"><span class="line"><span class="cl"><span class="x">&lt;ul class=&#34;language-toggle&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">    </span><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">site</span><span class="na">.Home.AllTranslations</span><span class="w"> </span><span class="cp">}}</span><span class="x"> 
+</span></span></span><span class="line"><span class="cl"><span class="x">    </span><span class="cp">{{</span><span class="k">if</span><span class="w"> </span><span class="k">eq</span><span class="w"> </span><span class="na">.Language.Lang</span><span class="w"> </span><span class="nx">site</span><span class="na">.Language.Lang</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">    &lt;li href=&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="x">&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">      </span><span class="cp">{{</span><span class="w"> </span><span class="na">.Language.LanguageName</span><span class="w"> </span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">      &lt;img class=&#34;language-icon&#34; src=&#34;flaticon.io&#34; alt=&#34;Arrow down&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">    &lt;/li&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">    </span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="x"> 
+</span></span></span><span class="line"><span class="cl"><span class="x">    </span><span class="cp">{{</span><span class="k">end</span><span class="cp">}}</span><span class="x"> 
+</span></span></span><span class="line"><span class="cl"><span class="x">    </span><span class="cp">{{</span><span class="k">range</span><span class="w"> </span><span class="nx">site</span><span class="na">.Home.AllTranslations</span><span class="cp">}}</span><span class="x"> 
+</span></span></span><span class="line"><span class="cl"><span class="x">    </span><span class="cp">{{</span><span class="k">if</span><span class="w"> </span><span class="k">ne</span><span class="w"> </span><span class="na">.Language.Langsite.Language.Lang</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">    &lt;li&gt;&lt;a href=&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="x">&#34;&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Language.LanguageName</span><span class="w"> </span><span class="cp">}}</span><span class="x">&lt;/a&gt;&lt;/li&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x">    </span><span class="cp">{{</span><span class="k">end</span><span class="cp">}}</span><span class="x"> 
+</span></span></span><span class="line"><span class="cl"><span class="x">    </span><span class="cp">{{</span><span class="k">end</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">  &lt;/ul&gt;
+</span></span></span></code></pre></div><p>Let’s break it down to step by step:</p>
+<p><code>site.Home.AllTranslations</code> is are taking all translations of home page of website</p>
+<p><code>if eq .Language.Lang site.Language.Lang</code> if the current website language matches one of the available languages, it will appear at the top of the list. You should remove the <code>&lt;a&gt;&lt;/a&gt;</code> tags to prevent issues with the language switcher on mobile devices, as :hover can cause problems for touch users.</p>
+<p><code>.Language.LanguageName</code> shows language that is displayed. Name is indicated in config file.</p>
+<p><code>if ne .Language.Lang site.Language.Lang</code> if it’s not one of the languages that website is using right now, they are shown below.</p>
+<p>I had challenges with <code>.Site</code> and <code>site</code>. The rule of thumb is if you meeting some kind of error with <code>.Site</code> - use <code>site</code>. <code>.Site</code> - is local, <code>site</code> is global variable.</p>
+<p>Additionally, you would want for website logo to lead to the home page of chosen language. It also can be archived made with following code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-template" data-lang="go-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">site</span><span class="na">.Home.AllTranslations</span><span class="w"> </span><span class="cp">}}</span><span class="x"> 
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="k">if</span><span class="w"> </span><span class="k">eq</span><span class="w"> </span><span class="na">.Language.Lang</span><span class="w"> </span><span class="nx">site</span><span class="na">.Language.Lang</span><span class="cp">}}</span><span class="x">
+</span></span></span><span class="line"><span class="cl"><span class="x">&lt;a href=&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="x">&#34;&gt;YOUR_LOGO&lt;/a&gt;
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="x"> 
+</span></span></span><span class="line"><span class="cl"><span class="x"></span><span class="cp">{{</span><span class="k">end</span><span class="cp">}}</span><span class="x">
+</span></span></span></code></pre></div>
+</article>
+ <footer>©2024
+</footer>
+  </body>
+</html>

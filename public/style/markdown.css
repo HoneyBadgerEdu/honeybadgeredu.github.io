@@ -23,3 +23,12 @@ article pre{
     border-radius: 15px;
     white-space:wrap;
 }
+article pre code{
+    font-size: 0.9rem;
+}
+article code{
+    background-color: darkslategrey;
+    padding: 0.2rem;
+    border-radius: 5px;
+    color:white;
+}

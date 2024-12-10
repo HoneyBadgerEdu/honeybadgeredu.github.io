@@ -1,10 +1,11 @@
 {{ define "main" }}
 <ul class="articles-list">
-  {{ range .Pages }}
+  <span style="color:gray">2024</span>
+  {{ range where .Site.RegularPages "Type" "articles"}}
   <li>
     <a href="{{ .Permalink }}"
-      >{{ .Date | time.Format ":date_medium"}}
-      <div>
+      ><span id="date">{{ .Date | time.Format "Jan 2"}}</span>
+      <div class="article-name">
         {{ .Title }}
         <p>{{.Summary}}</p>
       </div>

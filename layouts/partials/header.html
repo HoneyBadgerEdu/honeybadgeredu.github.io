@@ -1,7 +1,10 @@
 <header>
-  <div class="logo"><a href="/"><h2>Badger Tech</h2></a></div>
+  <div class="logo">
+    <a href="/"><h2>badger tech</h2></a>
+  </div>
   <nav>
-    <a href="">Contact</a>
-    <a href="">About</a>
+    {{range .Site.Menus.main}}
+    <a href="{{ .URL }}">{{.Name}}</a>
+    {{end}}
   </nav>
 </header>

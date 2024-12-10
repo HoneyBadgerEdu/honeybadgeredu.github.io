@@ -1,0 +1,5 @@
+Templates:
+
+YouTube Video
+{{< youtube id="KiiSUlZaO5w" title="Thumper Teaches Bambi To Walk" >}}
+_Related Youtube video_

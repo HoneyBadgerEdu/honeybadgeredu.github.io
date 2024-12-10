@@ -5,6 +5,13 @@
 .articles-list *{
     margin:0;
 }
+#date{
+    white-space: nowrap;
+    padding-right:1rem;
+}
+.articles-list div{
+    width: 100%;
+}
 .articles-list li a{
     display: flex;
     justify-content: space-between;
