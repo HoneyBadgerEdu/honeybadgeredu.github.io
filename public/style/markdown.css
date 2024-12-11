@@ -2,7 +2,7 @@ article{
     display: flex;
     flex-direction: column;
 }
-article h1{
+article h1, h2{
     font-weight: 500;
 }
 .underheader{

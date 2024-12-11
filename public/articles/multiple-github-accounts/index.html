@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Managing multiple account on GitHub</title>
@@ -18,9 +18,9 @@
   </div>
   <nav>
     
-    <a href="honeybager.github.io/contact/">contact</a>
+    <a href="/contact/">contact</a>
     
-    <a href="honeybager.github.io/about/">about</a>
+    <a href="/about/">about</a>
     
   </nav>
 </header>
@@ -28,20 +28,28 @@
 <article>
   <h1>Managing multiple account on GitHub</h1>
   <div class="underheader">
-    <span>Reading time: 1 min</span
+    <span>Reading time: 2 min</span
     ><span>Dec 3, 2024</span>
   </div>
-  <p>If you have multiple GitHub account it could be chalanging to switch between them every time you need so. During my career I had</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;logo&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/&#34;</span><span class="p">&gt;&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Badger Tech<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>That was an exapmle</p>
+  <p>If you have multiple GitHub account it could be changeling to switch between them every time you need so. During my programming experience I had several approaches to it. What options I have used:</p>
+<h2 id="1-deleting-credentials">1. Deleting credentials</h2>
+<p>You open Windows “Credential manager” and delete your local GitHub login and password. Then you login again with account you need.
+But you need to change your git config in the terminal to:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">global</span> <span class="nx">user</span><span class="p">.</span><span class="nx">name</span> <span class="s2">&#34;GITHUB_USERNAME&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">global</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="s2">&#34;MY_NAME@example.com&#34;</span>
+</span></span></code></pre></div><p>Main disadvantage is if you forget to do it, then the other account could appear as contributor. To remove it you need to create new repo.</p>
+<h2 id="2-creating-several-windows-profiles">2. Creating several Windows profiles</h2>
+<p>This approach would guarantee that every GitHub account is connected to each own VS Code account.
+Significant disadvantage is that it takes time to switch between them. Specially, if you need to check how you written code from the other account in private repo.</p>
+<h2 id="3ssh-keys">3.SSH keys</h2>
+<p>I haven’t tried it myself, but seen YouTube videos and it was confusing - the process of connecting it.</p>
+<h2 id="4gitkraken">4.GitKraken</h2>
+<p>This application works very well and changing between account is pretty fast. Best for big projects on my opinion, because it’s designed to efficient managing of GitHub branches.</p>
+<h2 id="5github-codespace">5.GitHub Codespace</h2>
+<p>This option is what I have chosen. I’m not working on big projects and programming is just a hobby. To switch account, simply enter your another GitHub profile via browser and then VS Code.
+But there is several limitations with it. First is that you are limited with usage time. It’s just 120 hours in 28 days and your open codespaces storage limited to 15 GB.
+Biggest advantage is it’s comparability. It can be opened via VS Code and you connect directly to GitHub server.</p>
+<p>To sum it all up, as you would guess, what you choose depends on what you need.</p>
 
 </article>
  <footer>©2024

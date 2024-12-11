@@ -2,38 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Badger Tech</title>
-    <link>honeybager.github.io/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content on Badger Tech</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="honeybager.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple language switcher for HUGO</title>
-      <link>honeybager.github.io/articles/language-switch-hugo/</link>
+      <link>//localhost:1313/articles/language-switch-hugo/</link>
       <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>honeybager.github.io/articles/language-switch-hugo/</guid>
+      <guid>//localhost:1313/articles/language-switch-hugo/</guid>
       <description>Made as minimalistic as possible</description>
     </item>
     <item>
-      <title>Managing multiple account on GitHub</title>
-      <link>honeybager.github.io/articles/multiple-github-accounts/</link>
-      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>honeybager.github.io/articles/multiple-github-accounts/</guid>
-      <description>What are the options now, theirs benefits and best solution</description>
-    </item>
-    <item>
       <title>About</title>
-      <link>honeybager.github.io/about/</link>
+      <link>//localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>honeybager.github.io/about/</guid>
+      <guid>//localhost:1313/about/</guid>
       <description>&lt;p&gt;The main goal is to make life easier for other programmers by sharing the challenges I encountered during development and offering solutions.&lt;/p&gt;&#xA;&lt;p&gt;A little about me: my primary profession is in medicine, and programming is more of a hobby — though it occasionally brings in some extra income :)&lt;/p&gt;&#xA;&lt;p&gt;I mainly work with HUGO, TinaCMS and JS applications.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>honeybager.github.io/contact/</link>
+      <link>//localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>honeybager.github.io/contact/</guid>
+      <guid>//localhost:1313/contact/</guid>
       <description>&lt;p&gt;Best and only way to contact me is via &lt;a href=&#34;https://t.me/cat_scan&#34;&gt;Telegram&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
