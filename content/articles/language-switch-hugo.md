@@ -40,7 +40,7 @@ Let’s break it down to step by step:
 
 I had challenges with `.Site` and `site`. The rule of thumb is if you meeting some kind of error with `.Site` - use `site`. `.Site` - is local, `site` is global variable.
 
-Additionally, you would want for website logo to lead to the home page of chosen language. It also can be archived made with following code:
+Additionally, you would want for website logo to lead to the home page of chosen language. It also can be archived with following code:
 
 ```go-template
 {{ range site.Home.AllTranslations }} 

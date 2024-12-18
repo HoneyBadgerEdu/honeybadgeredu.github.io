@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://honeybadgeredu.github.io/sitemap.xml
